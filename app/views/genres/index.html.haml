@@ -1,0 +1,9 @@
+- @genres.each do |genre|
+  %article.video_category
+    %header
+      %h3= link_to "#{genre.category}", genre_path(genre.id)
+    .videos.row
+      - genre.videos.each do |video|
+        .video.span2
+          = link_to "#{video_path(video.id)}", nil do
+            %img(src="#{video.small_cover_url}")
