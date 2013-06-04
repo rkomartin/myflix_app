@@ -7,6 +7,4 @@ Myflix::Application.routes.draw do
   resources :genres, only: [:index, :show]  
   resources :videos, only: [:index, :show]
 
-	# Test line
-
 end
