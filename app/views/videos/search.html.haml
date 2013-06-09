@@ -1,0 +1,7 @@
+%header
+  %h3 Searched Videos
+  .videos.row
+  - @results.each do |video|
+    .video.span2
+      = link_to "#{video_path(video.id)}", nil do
+        %img(src="#{video.small_cover_url}")
