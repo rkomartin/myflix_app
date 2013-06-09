@@ -1,4 +1,5 @@
 class VideosController < ApplicationController
+  before_filter :require_user
   def index
     @videos = Video.all
   end
@@ -9,5 +10,9 @@ class VideosController < ApplicationController
       flash[:alert] = "This video does NOT exist!"
       redirect_to videos_path
     end
+  end
+
+  def search
+    @results = Video.search_by_title(params[:search_term])
   end
 end

@@ -2,7 +2,9 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
 gem 'haml-rails'
+gem 'bootstrap_form'
 gem 'bootstrap-sass'
+gem 'bcrypt-ruby'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -11,7 +13,7 @@ group :assets do
 end
 
 group :test, :development do
-	gem 'rspec-rails', '~> 2.0'
+  gem 'rspec-rails', '~> 2.0'
 end
 
 group :test do
