@@ -5,6 +5,8 @@ gem 'haml-rails'
 gem 'bootstrap_form'
 gem 'bootstrap-sass'
 gem 'bcrypt-ruby'
+gem 'fabrication'
+gem 'faker'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
