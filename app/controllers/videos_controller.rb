@@ -1,5 +1,6 @@
 class VideosController < ApplicationController
   before_filter :require_user
+
   def index
     @videos = Video.all
   end
@@ -9,6 +10,8 @@ class VideosController < ApplicationController
     if @video.nil?
       flash[:alert] = "This video does NOT exist!"
       redirect_to videos_path
+    else
+      @reviews = @video.reviews
     end
   end
 
