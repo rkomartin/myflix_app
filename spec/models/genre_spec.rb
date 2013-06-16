@@ -17,6 +17,7 @@ describe Genre do
   end
 
   it {should have_many(:videos)}
+  it {should validate_presence_of(:category)}
 
   describe "#recent_videos" do
     it "returns the videos in the reverse chronological order by created_at" do
