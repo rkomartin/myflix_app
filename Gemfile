@@ -7,6 +7,7 @@ gem 'bootstrap-sass'
 gem 'bcrypt-ruby'
 gem 'fabrication'
 gem 'faker'
+gem 'capybara'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
