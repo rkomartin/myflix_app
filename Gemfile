@@ -17,17 +17,20 @@ group :test, :development do
   gem 'rspec-rails', '~> 2.0'
   gem 'fabrication'
   gem 'faker'
-  gem 'capybara'
+
 end
 
 group :test do
   gem 'shoulda-matchers'
+  gem 'capybara'
+  gem 'launchy'
 end
 
 group :development do
   gem 'sqlite3'
   gem 'pry'
   gem 'pry-nav'
+  gem 'letter_opener'
 end
 
 group :production do
