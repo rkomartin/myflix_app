@@ -57,8 +57,7 @@ Myflix::Application.configure do
     domain:               'gmail.com',
     user_name:            ENV['GMAIL_USERNAME'],
     password:             ENV['GMAIL_PASSWORD'],
-    authentication:       'plain',
-    enable_starttls_auto: true  }
+    openssl_verify_mode:  'none' }
   config.action_mailer.default_url_options = { host: 'http://rk-myflix.herokuapp.com' }
 
   # Enable threaded mode
