@@ -4,7 +4,7 @@ gem 'rails', '3.2.11'
 gem 'haml-rails'
 gem 'bootstrap_form'
 gem 'bootstrap-sass'
-gem 'bcrypt-ruby'
+gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'jquery-rails'
 
 group :assets do
