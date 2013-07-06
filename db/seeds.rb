@@ -20,6 +20,7 @@ video8 = Video.create(title: "South Park", description: "Quite likely, one of th
 video9 = Video.create(title: "South Park", description: "Quite likely, one of the craziest cartoons ever", small_cover_url: "/tmp/south_park.jpg", large_cover_url: "/tmp/monk_large.jpg", genre: comedy)
 
 ioana = User.create(full_name: "Ioana Komartin", password: "parola", email: "ioana@example.com")
+ioana.update_column(:token, SecureRandom.urlsafe_base64)
 
 review1 = Review.create(user: ioana, video: video1, rating: 5, content: "WOOOOW!")
 review2 = Review.create(user: ioana, video: video1, rating: 3, content: "So so")
