@@ -19,4 +19,14 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
   end
+
+  def new_with_invitation_token
+    invitation = Invitation.where(token: params[:token]).first
+    if invitation
+      @user = User.new(email: invitation.recipient_email)
+      render :new
+    else
+      redirect_to expired_token_path
+    end
+  end
 end
