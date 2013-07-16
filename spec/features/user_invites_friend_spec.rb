@@ -10,6 +10,7 @@ feature "User invites friend" do
     fill_in "Friend's Email Address", with: "john@example.com"
     fill_in "Message", with: "Please join!"
     click_button "Send Invitation"
+    sign_out
 
     open_email "john@example.com"
     current_email.click_link "Accept this invitation"
@@ -25,4 +26,5 @@ feature "User invites friend" do
     expect(page).to have_content "John Doe"
 
     clear_email
+  end
 end
