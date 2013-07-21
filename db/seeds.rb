@@ -9,10 +9,10 @@
 comedy = Genre.create(category: "Comedy")
 drama = Genre.create(category: "Drama")
 
-video1 = Video.create(title: "Monk", description: "Monk is Monk", small_cover: File.open(File.join(Rails.root, "/public/tmp/monk.jpg")), large_cover: File.open(File.join(Rails.root, "/public/tmp/monk_large.jpg")), genre: comedy)
-video2 = Video.create(title: "Family Guy", description: "Well, a guy with a family", small_cover: File.open(File.join(Rails.root, "/public/tmp/family_guy.jpg")), large_cover: File.open(File.join(Rails.root, "/public/tmp/monk_large.jpg")), genre: drama)
-video3 = Video.create(title: "Futurama", description: "I have no clue what this is about", small_cover: File.open(File.join(Rails.root, "/public/tmp/futurama.jpg")), large_cover: File.open(File.join(Rails.root, "/public/tmp/monk_large.jpg")), genre: drama)
-video4 = Video.create(title: "South Park", description: "Quite likely, one of the craziest cartoons ever", small_cover: File.open(File.join(Rails.root, "/public/tmp/south_park.jpg")), large_cover: File.open(File.join(Rails.root, "/public/tmp/monk_large.jpg")), genre: comedy)
+video1 = Video.create(title: "Monk", description: "Monk is Monk", small_cover: File.open(File.join(Rails.root, "/public/tmp/monk.jpg")), large_cover: File.open(File.join(Rails.root, "/public/tmp/monk_large.jpg")), genre: comedy, video_url: "https://www.youtube.com/watch?v=P0j14GrB-u8")
+video2 = Video.create(title: "Family Guy", description: "Well, a guy with a family", small_cover: File.open(File.join(Rails.root, "/public/tmp/family_guy.jpg")), large_cover: File.open(File.join(Rails.root, "/public/tmp/monk_large.jpg")), genre: drama, video_url: "https://www.youtube.com/watch?v=P0j14GrB-u8")
+video3 = Video.create(title: "Futurama", description: "I have no clue what this is about", small_cover: File.open(File.join(Rails.root, "/public/tmp/futurama.jpg")), large_cover: File.open(File.join(Rails.root, "/public/tmp/monk_large.jpg")), genre: drama, video_url: "https://www.youtube.com/watch?v=P0j14GrB-u8")
+video4 = Video.create(title: "South Park", description: "Quite likely, one of the craziest cartoons ever", small_cover: File.open(File.join(Rails.root, "/public/tmp/south_park.jpg")), large_cover: File.open(File.join(Rails.root, "/public/tmp/monk_large.jpg")), genre: comedy, video_url: "https://www.youtube.com/watch?v=P0j14GrB-u8")
 
 ioana = User.create(full_name: "Ioana Komartin", password: "parola", email: "ioana@example.com", admin: true)
 ioana.update_column(:token, SecureRandom.urlsafe_base64)
