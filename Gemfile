@@ -6,6 +6,9 @@ gem 'bootstrap_form'
 gem 'bootstrap-sass'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'jquery-rails'
+gem 'carrierwave'
+gem 'mini_magick', '3.5.0'
+gem "fog"
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

@@ -9,6 +9,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       @user.update_column(:token, SecureRandom.urlsafe_base64)
+      @user.update_column(:admin, false)
       AppMailer.send_welcome_email(@user).deliver
       redirect_to sign_in_path
     else
