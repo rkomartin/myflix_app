@@ -8,7 +8,9 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'jquery-rails'
 gem 'carrierwave'
 gem 'mini_magick', '3.5.0'
-gem "fog"
+gem 'fog'
+gem 'stripe'
+gem 'figaro'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
