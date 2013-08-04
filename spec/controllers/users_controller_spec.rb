@@ -10,6 +10,10 @@ describe UsersController do
 
   describe "POST create" do
     context "with valid input" do
+      before do
+        StripeWrapper::Charge.stub(:create)
+      end
+
       it "creates the user" do
         post :create, user: {email: "robert.komartin@gmail.com", password: "password", full_name: "Robert Komartin"}
         expect(User.count).to eq(1)
@@ -39,6 +43,10 @@ describe UsersController do
     end
 
     context "sending emails" do
+      before do
+        StripeWrapper::Charge.stub(:create)
+      end
+
       after { ActionMailer::Base.deliveries.clear }
       
       it "sends out email to the user with valid inputs" do
